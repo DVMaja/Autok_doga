@@ -1,9 +1,11 @@
 class AutoUrlap {
     #adat = []
+    #formKod = [];
 
-    constructor(adat, SzuloElem) {
+    constructor(adat, SzuloElem, formKod) {
         this.#adat = adat;
         this.SzuloElem = SzuloElem;
+        this.#formKod = formKod;
 
         //console.log("HAho")
 
@@ -26,17 +28,17 @@ class AutoUrlap {
 
     #adatgyujt() {
         for (const key in this.#adat) {
-            this.#adat[key] = $(`#${key}`).val();
+            this.#formKod[key] = $(`#${key}`).val();
         }
     }
 
     #urlapLetrehoz() {
         let txt = "";
-
-        for (const key in this.#adat) {
+        console.log(this.#adat);
+        for (const key in this.#formKod) {
             txt += `<div">
-            <label for="${key}"> ${this.#adat[key]}</label>
-            <input> type="text" id="${key}" name="${key}" value="${this.#adat[key]}" </input>
+            <label for="${key}"> ${this.#formKod[key]}</label>
+            <input type="text" id="${key}" name="${key}" value="${this.#adat[key]}" >
             </div>`;
         }
         txt += `<div>

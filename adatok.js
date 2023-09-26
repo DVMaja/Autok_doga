@@ -1,11 +1,11 @@
 export const AUTOK = [
     {
         tipus: "Autók típusa",
-        rendszám: "Rendszámok",
+        rendszam: "Rendszámok",
     },
-    { tipus: "volvo", rendszám: "AAA-123" },
-    { tipus: "fiat", rendszám: "AED-873" },
-    { tipus: "skoda", rendszám: "ACV-233" },
+    { tipus: "volvo", rendszam: "AAA-123" },
+    { tipus: "fiat", rendszam: "AED-873" },
+    { tipus: "skoda", rendszam: "ACV-233" },
     
     { tipus: "BMV", rendszám: "SDV-986" }
 ];
