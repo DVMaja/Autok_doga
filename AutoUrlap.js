@@ -6,16 +6,14 @@ class AutoUrlap {
         this.#adat = adat;
         this.SzuloElem = SzuloElem;
         this.#formKod = formKod;
-
         //console.log("HAho")
 
         this.formElem = this.SzuloElem.children("form");
         this.#urlapLetrehoz();
         console.log(this.formElem);
 
-
         this.submitGomb = this.formElem.children("div").children("#submit");
-        this.tevekenyseg = this.formElem.children("div").children("#tipus");
+        this.tipus = this.formElem.children("div").children("#tipus");
         this.hatarido = this.formElem.children("div").children("#rendszam");
 
 
@@ -24,7 +22,6 @@ class AutoUrlap {
             this.#adatgyujt();
             this.#esemenyTrigger("ujAdatHozzaAdas");
         })
-        
     }
 
     #adatgyujt() {
@@ -45,8 +42,7 @@ class AutoUrlap {
         txt += `<div>
                 <input type="submit" value="Új elem">
                 </div>`;
-
-        //console.log(txt);
+        
         this.formElem.html(txt);
     }
 
