@@ -5,16 +5,19 @@ class AutoUrlap {
         this.#adat = adat;
         this.SzuloElem = SzuloElem;
 
+        //console.log("HAho")
+
+        this.formElem = this.SzuloElem.children("form");
         this.#urlapLetrehoz();
-        this.formElem = this.szuloElem.children("form");
+        console.log(this.formElem);
+
 
         this.submitGomb = this.formElem.children("div").children("#submit");
         this.tevekenyseg = this.formElem.children("div").children("#tipus");
-        this.hatarido = this.formElem.children("div").children("#rendszam");      
+        this.hatarido = this.formElem.children("div").children("#rendszam");
 
-        
+
         this.submitGomb.on("click", (event) => {
-            console.log("katt");
             event.preventDefault();
             this.#adatgyujt();
             this.#esemenyTrigger("ujAdatHozzaAdas");
@@ -25,7 +28,6 @@ class AutoUrlap {
         for (const key in this.#adat) {
             this.#adat[key] = $(`#${key}`).val();
         }
-
     }
 
     #urlapLetrehoz() {
@@ -34,16 +36,15 @@ class AutoUrlap {
         for (const key in this.#adat) {
             txt += `<div">
             <label for="${key}"> ${this.#adat[key]}</label>
-            <input> type="text" id="${key}" name="${key}" value="valami" </input>
+            <input> type="text" id="${key}" name="${key}" value="${this.#adat[key]}" </input>
             </div>`;
         }
         txt += `<div>
                 <input type="submit" value="Új elem">
-                </div>`
+                </div>`;
 
+        //console.log(txt);
         this.formElem.html(txt);
-
-
     }
 
     #esemenyTrigger() {
