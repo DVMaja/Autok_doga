@@ -10,7 +10,7 @@ class AutoUrlap {
 
         this.formElem = this.SzuloElem.children("form");
         this.#urlapLetrehoz();
-        console.log(this.formElem);
+        //console.log(this.formElem);
 
         this.submitGomb = this.formElem.children("div").children("#submit");
         this.tipus = this.formElem.children("div").children("#tipus");
@@ -32,7 +32,7 @@ class AutoUrlap {
 
     #urlapLetrehoz() {
         let txt = "";
-        console.log(this.#adat);
+        //console.log(this.#adat);
         for (const key in this.#formKod) {
             txt += `<div">
             <label for="${key}"> ${this.#formKod[key]}</label>

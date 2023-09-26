@@ -1,0 +1,2 @@
+sablont megtanulni
+#adat = {} -> jobb ha objektumot adunk át

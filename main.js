@@ -7,6 +7,10 @@ $(function () {
     const FORMSZULOELEM = $(".ujadat");
     new AutoUrlap(AUTOK[0], FORMSZULOELEM, {tipus: "Autó típusa", rendszam:"Rendszám"});
 
-
+    const UJAUTOLISTA = [];
+    $(window).on("ujAdatHozzaAdas", (event) => {
+        UJAUTOLISTA.push(event.detail);
+        //console.log("Új adat" + UJAUTOLISTA);
+    })
 
 })
