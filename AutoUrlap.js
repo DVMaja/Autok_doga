@@ -24,11 +24,12 @@ class AutoUrlap {
             this.#adatgyujt();
             this.#esemenyTrigger("ujAdatHozzaAdas");
         })
+        
     }
 
     #adatgyujt() {
         for (const key in this.#adat) {
-            this.#formKod[key] = $(`#${key}`).val();
+            this.#adat[key] = $(`#${key}`).val();
         }
     }
 
